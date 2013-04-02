@@ -9,6 +9,12 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done
 unset file
 
+# init z   https://github.com/rupa/z
+source ~/code/z/z.sh
+
+# init rvm
+source ~/.rvm/scripts/rvm
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
@@ -39,4 +45,10 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 which grunt > /dev/null && eval "$(grunt --completion=bash)"
 
 # If possible, add tab completion for many more commands
-[ -f /etc/bash_completion ] && source /etc/bash_completion
+[ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
+
+
+#git completion...
+. ~/.git-completion.sh
+. ~/.git-flow-completion.sh
+. ~/.symfony2-completion.sh
