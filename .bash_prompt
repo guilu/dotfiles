@@ -1,8 +1,2 @@
-# @gf3’s Sexy Bash Prompt, inspired by “Extravagant Zsh Prompt”
-# Shamelessly copied from https://github.com/gf3/dotfiles
-# Screenshot: http://i.imgur.com/s0Blh.png
-
-default_username='diegobarrioh'
-
 #my prompt es powerline.... si no está instalado y configurado esto petará....
 . ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
