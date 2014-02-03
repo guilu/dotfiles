@@ -24,6 +24,7 @@ export LESS_TERMCAP_md="$ORANGE"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
-#path to get brew doctor working
-export PATH=/usr/local/mysql/bin:.:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
+#usr/local/bin delante de /usr/bin to get brew doctor working
+export PATH=/usr/local/bin:/usr/bin:$PATH
 
+export PATH=$PATH:~/code/git-achievements
