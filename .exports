@@ -33,6 +33,11 @@ export PATH=$PATH:~/code/git-achievements
 #PYTHON
 export PATH=$PATH:~/Library/Python/2.7/bin
 
-
 #coreutils antes de /usr/bin
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+
+#php
+export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
+
+#sonar
+export MAVEN_OPTS=”-Xmx512m -XX:MaxPermSize=128m”
