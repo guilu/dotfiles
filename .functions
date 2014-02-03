@@ -158,45 +158,53 @@ gifify() {
 
 
 function git_stats {
-    about 'display stats per author'
-    group 'git'
-
-# awesome work from https://github.com/esc/git-stats
-# including some modifications
-
-if [ -n "$(git symbolic-ref HEAD 2> /dev/null)" ]; then
-    echo "Number of commits per author:"
-    git --no-pager shortlog -sn --all
-    AUTHORS=$( git shortlog -sn --all | cut -f2 | cut -f1 -d' ')
-    LOGOPTS=""
-    if [ "$1" == '-w' ]; then
+ #!/bin/bash
+LOGOPTS=
+END_AND_BEGIN=
+#argument parsing
+while [ -n "$1" ]; do
+    case "$1" in
+     "-s")
+        shift
+        END_AND_BEGIN="$END_AND_BEGIN --after=$1"
+    ;;
+    "-e")
+        shift
+        END_AND_BEGIN="$END_AND_BEGIN --before=$1"
+    ;;
+    "-w")
         LOGOPTS="$LOGOPTS -w"
-        shift
-    fi
-    if [ "$1" == '-M' ]; then
-        LOGOPTS="$LOGOPTS -M"
-        shift
-    fi
-    if [ "$1" == '-C' ]; then
+    ;;
+    "-C")
         LOGOPTS="$LOGOPTS -C --find-copies-harder"
-        shift
-    fi
-    for a in $AUTHORS
-    do
-        echo '-------------------'
-        echo "Statistics for: $a"
-        echo -n "Number of files changed: "
-        git log $LOGOPTS --all --numstat --format="%n" --author=$a | cut -f3 | sort -iu | wc -l
-        echo -n "Number of lines added: "
-        git log $LOGOPTS --all --numstat --format="%n" --author=$a | cut -f1 | awk '{s+=$1} END {print s}'
-        echo -n "Number of lines deleted: "
-        git log $LOGOPTS --all --numstat --format="%n" --author=$a | cut -f2 | awk '{s+=$1} END {print s}'
-        echo -n "Number of merges: "
-        git log $LOGOPTS --all --merges --author=$a | grep -c '^commit'
-    done
-else
-    echo "you're currently not in a git repository"
-fi
+    ;;
+    "-M")
+        LOGOPTS="$LOGOPTS -M"
+    ;;
+    esac
+    shift
+done
+
+#test if the directory is a git
+git branch &> /dev/null || exit 3
+echo "Number of commits per author:"
+git --no-pager shortlog $END_AND_BEGIN  -sn --all
+AUTHORS=$(git shortlog $END_AND_BEGIN  -sn --all | cut -f2 | cut -f1 -d' ')
+
+for a in $AUTHORS
+do
+    echo '-------------------'
+    echo "Statistics for: $a"
+    echo -n "Number of files changed: "
+    git log $LOGOPTS $END_AND_BEGIN --all --numstat --format="%n" --author=$a | grep -v -e "^$" | cut -f3 | sort -iu | wc -l
+    echo -n "Number of lines added: "
+    git log $LOGOPTS $END_AND_BEGIN --all --numstat --format="%n" --author=$a | cut -f1 | awk '{s+=$1} END {print s}'
+    echo -n "Number of lines deleted: "
+    git log $LOGOPTS $END_AND_BEGIN --all --numstat --format="%n" --author=$a | cut -f2 | awk '{s+=$1} END {print s}'
+    echo -n "Number of merges: "
+    git log $LOGOPTS $END_AND_BEGIN --all --merges --author=$a | grep -c '^commit'
+
+done
 }
 
 
@@ -224,7 +232,6 @@ delete_DS(){
 	find . -name '*.DS_Store' -type f -delete
 }
 
-
 sf2_permissions(){
 	rm -rf app/cache/*
 	rm -rf app/logs/*
@@ -232,4 +239,22 @@ sf2_permissions(){
 	sudo chmod +a "$APACHEUSER allow delete,write,append,file_inherit,directory_inherit" app/cache app/logs
 	sudo chmod +a "`whoami` allow delete,write,append,file_inherit,directory_inherit" app/cache app/logs
 }
+
+
+#renombrar el usuario de todos los commits de un proyecto
+function git_change_user
+{
+    if [[ -n "$2" ]]; then
+        #necesita  #change name: git change-commits GIT_AUTHOR_EMAIL "old@email.com" "new@email.com" -- -10
+        git change-commits  GIT_AUTHOR_NAME "$1" "$2" -- --all
+    else
+        echo "proper usage: git_change_user old_user new_user"
+    fi
+}
+
+#tamaño de una carpeta
+tam(){
+    du -sh $1
+}
+
 
