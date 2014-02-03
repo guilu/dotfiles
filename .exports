@@ -27,6 +27,3 @@ export MANPAGER="less -X"
 #path to get brew doctor working
 export PATH=/usr/local/mysql/bin:.:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
 
-#redcam proxys
-export http_proxy="http://53231041:Ba4D1e60@proxy2:8080"
-export https_proxy="http://53231041:Ba4D1e60@proxy2:8080"

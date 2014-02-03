@@ -1,14 +1,15 @@
 " Make vim more useful
 set nocompatible
 
+execute pathogen#infect()
+filetype plugin indent on
+
+
 " Set syntax highlighting options.
 set t_Co=256
 set background=dark
 syntax on
-colorscheme badwolf
-
-" Enabled later, after Pathogen
-filetype off
+colorscheme solarized
 
 " Change mapleader
 let mapleader=","
@@ -221,9 +222,9 @@ autocmd BufReadPost *
 set relativenumber " Use relative line numbers. Current line is still in status bar.
 au BufReadPost,BufNewFile * set relativenumber
 
-" Emulate bundles, allow plugins to live independantly. Easier to manage.
-call pathogen#runtime_append_all_bundles()
-filetype plugin indent on
+
+" TWIG
+" au BufRead,BufNewFile *.html.twig set filetype=htmljinja
 
 " JSON
 au BufRead,BufNewFile *.json set ft=json syntax=javascript
@@ -243,6 +244,9 @@ au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 " ZSH
 au BufRead,BufNewFile .zsh_rc,.functions,.commonrc set ft=zsh
 
+" BASH
+au BufNewFile,BufRead .bashrc*,bashrc,bash.bashrc,.bash_profile*,.bash_logout*,*.bash,*.ebuild call SetFileTypeSH("bash")
+
 " CtrlP
 let g:ctrlp_match_window_bottom = 0 " Show at top of window
 let g:ctrlp_working_path_mode = 2 " Smart path mode
@@ -255,5 +259,47 @@ let g:vimclojure#ParenRainbow = 1 " Enable rainbow parens
 let g:vimclojure#DynamicHighlighting = 1 " Dynamic highlighting
 let g:vimclojure#FuzzyIndent = 1 " Names beginning in 'def' or 'with' to be indented as if they were included in the 'lispwords' option
 
+
 " Rainbow Parenthesis
 nnoremap <leader>rp :RainbowParenthesesToggle<CR>
+
+set rtp+=~/Library/Python/2.7/lib/python/site-packages//powerline/bindings/vim
+
+if ! has('gui_running')
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
+endif
+
+nnoremap <F5> :GundoToggle<CR>
+nmap <ESC>t :NERDTree<CR>
+
+" VAM
+set runtimepath+=~/.vim/vim-addon-manager
+call vam#ActivateAddons(["vim-twig"], {'auto_install' : 1})
+
+
+" ======== Glorious background toggling ========
+
+function! EmoModeOn()
+  set background=dark
+endfunction
+
+function! EmoModeOff()
+  set background=light
+endfunction
+
+function! ToggleEmoMode()
+  echo 'emo mode called'
+  if &background == "dark"
+    call EmoModeOff()
+  elseif &background == "light"
+    call EmoModeOn()
+  end
+endfunction
+
+
+map <F6> :call ToggleEmoMode()<CR>
