@@ -27,4 +27,8 @@ export MANPAGER="less -X"
 #usr/local/bin delante de /usr/bin to get brew doctor working
 export PATH=/usr/local/bin:/usr/bin:$PATH
 
+#git-achievements
 export PATH=$PATH:~/code/git-achievements
+
+#PYTHON
+export PATH=$PATH:~/Library/Python/2.7/bin

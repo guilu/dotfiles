@@ -1,6 +1,3 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH"
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -48,7 +45,7 @@ which grunt > /dev/null && eval "$(grunt --completion=bash)"
 [ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
 
 
-#git completion...
+#git && symfony2 completion...
 . ~/.git-completion.sh
 . ~/.git-flow-completion.sh
 . ~/.symfony2-completion.sh
