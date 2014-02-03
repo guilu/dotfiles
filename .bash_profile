@@ -1,7 +1,7 @@
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/.{path,bash_prompt,aliases,exports,functions,extra}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -49,3 +49,4 @@ which grunt > /dev/null && eval "$(grunt --completion=bash)"
 . ~/.git-completion.sh
 . ~/.git-flow-completion.sh
 . ~/.symfony2-completion.sh
+

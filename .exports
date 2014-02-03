@@ -38,3 +38,6 @@ export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 #php
 export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
+
+#el wrap alias tiene que ir despues de haber pasado los aliases asi que lo pongo aqui
+. ~/.wrap-alias.sh
