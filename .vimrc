@@ -281,7 +281,6 @@ nmap <ESC>t :NERDTree<CR>
 set runtimepath+=~/.vim/vim-addon-manager
 call vam#ActivateAddons(["vim-twig"], {'auto_install' : 1})
 
-
 " ======== Glorious background toggling ========
 
 function! EmoModeOn()
