@@ -38,3 +38,6 @@ export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 #php
 export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
+
+#mis herramientas
+export PATH=$PATH:~/bin
