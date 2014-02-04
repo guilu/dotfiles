@@ -2100,3 +2100,7 @@ commit -am no quiero perder mis git-achivementes asi que apuntan aqui y los voy 
 Date: mar feb  4 13:02:01 CET 2014
 status -sb 
 Date: mar feb  4 13:02:04 CET 2014
+commit -am los action tampoco
+Date: mar feb  4 13:02:15 CET 2014
+add .git-achievements-action.log
+Date: mar feb  4 13:02:23 CET 2014
