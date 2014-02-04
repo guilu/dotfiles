@@ -2096,3 +2096,7 @@ status -sb
 Date: mar feb  4 13:01:04 CET 2014
 status -sb 
 Date: mar feb  4 13:01:35 CET 2014
+commit -am no quiero perder mis git-achivementes asi que apuntan aqui y los voy actualizando
+Date: mar feb  4 13:02:01 CET 2014
+status -sb 
+Date: mar feb  4 13:02:04 CET 2014
