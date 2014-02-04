@@ -250,7 +250,7 @@ function apache_permissions
 
 
 #renombrar el usuario de todos los commits de un proyecto
-function git_change_user
+function git_change_author_name
 {
     if [[ -n "$2" ]]; then
         #necesita  #change name: git change-commits GIT_AUTHOR_EMAIL "old@email.com" "new@email.com" -- -10
