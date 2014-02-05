@@ -42,3 +42,6 @@ export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
 
 #mis herramientas
 export PATH=$PATH:~/bin
+
+#JAVA_HOME
+export JAVA_HOME=$(/usr/libexec/java_home)
