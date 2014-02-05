@@ -265,4 +265,7 @@ tam(){
     du -sh $1
 }
 
+delete_maven_unfinished_downloads(){
+    find ~/.m2  -name "*.lastUpdated" -exec grep -q "Could not transfer" {} \; -print -exec rm {} \;
+}
 
