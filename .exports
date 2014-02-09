@@ -39,6 +39,8 @@ export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 #php
 export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
+#composer require --global
+export PATH="~/.composer/vendor/bin"
 
 #mis herramientas
 export PATH=$PATH:~/bin
