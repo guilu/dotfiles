@@ -350,3 +350,59 @@
                      Rewrite branches with git filter-branch                     
 ********************************************************************************
 
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                         Apprentice Architect (Level 1)                         
+                     Created a new repository with git init.                     
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                               Let there be light                               
+                            Commit without a parent.                            
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                         Apprentice Goldsmith (Level 1)                         
+           Reviewed patches before committing with git diff --cached.           
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                         Apprentice Locksmith (Level 1)                         
+Add Signed-off-by line at the end of the commit log message using git commit -s.
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                                    Caretaker                                    
+                    Added a .gitignore file to a repository.                    
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                         Apprentice Seamstress (Level 1)                         
+                    amended a commit with git commit --amend.                    
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                          Apprentice Merchant (Level 1)                          
+                Added an external repository with git remote add.                
+********************************************************************************
+
