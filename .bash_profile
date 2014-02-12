@@ -12,7 +12,7 @@ if [ -e ~/code/z/z.sh ]; then
 fi
 
 # init rvm
-if [ -e ~/.rvm/scripts/rvm]; then
+if [ -e ~/.rvm/scripts/rvm ]; then
     . ~/.rvm/scripts/rvm
 fi
 
