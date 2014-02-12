@@ -51,7 +51,7 @@ which grunt > /dev/null && eval "$(grunt --completion=bash)"
 
 #git completion...
 if [ -e ~/.git-completion.sh ]; then
-    .~/.git-completion.sh
+    . ~/.git-completion.sh
 fi
 
 #git-flow completion
