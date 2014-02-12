@@ -7,10 +7,14 @@ done
 unset file
 
 # init z   https://github.com/rupa/z
-source ~/code/z/z.sh
+if [ -e ~/code/z/z.sh ]; then
+    . ~/code/z/z.sh
+fi
 
 # init rvm
-source ~/.rvm/scripts/rvm
+if [ -e ~/.rvm/scripts/rvm]; then
+    . ~/.rvm/scripts/rvm
+fi
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
@@ -45,8 +49,18 @@ which grunt > /dev/null && eval "$(grunt --completion=bash)"
 [ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
 
 
-#git && symfony2 completion...
-. ~/.git-completion.sh
-. ~/.git-flow-completion.sh
-. ~/.symfony2-completion.sh
+#git completion...
+if [ -e ~/.git-completion.sh ]; then
+    .~/.git-completion.sh
+fi
+
+#git-flow completion
+if [ -e ~/.git-flow-completion.sh ]; then
+    . ~/.git-flow-completion.sh
+fi
+
+#symfony2 completion
+if [ -e ~/code/symfony2-autocomplete/sf2-completion.sh ]; then
+    . ~/code/symfony2-autocomplete/sf2-completion.sh
+fi
 
