@@ -19,8 +19,7 @@ alias m="mvn"
 alias s="subl ."
 alias o="open"
 alias oo="open ."
-
-alias g='git-achievements'
+alias g='git-achievements' #git-achievements: https://github.com/guilu/git-achievements
 
 
 # Detect which `ls` flavor is in use

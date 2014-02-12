@@ -406,3 +406,11 @@ Add Signed-off-by line at the end of the commit log message using git commit -s.
                 Added an external repository with git remote add.                
 ********************************************************************************
 
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                        Apprentice Web Designer (Level 1)                        
+      Instantly browse your working repository in gitweb with git instaweb      
+********************************************************************************
+

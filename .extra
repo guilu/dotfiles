@@ -1,8 +1,5 @@
 default_username='diegobarrioh'
 
-#para envoler los alias y que tambien tengan autocompletion
-. ~/.wrap-alias.sh
-
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
 GIT_AUTHOR_NAME="Diego Barrio H"
