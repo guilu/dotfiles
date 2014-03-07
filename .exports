@@ -45,6 +45,9 @@ export PATH="~/.composer/vendor/bin:$PATH"
 #mis herramientas
 export PATH=$PATH:~/bin
 
+#npm
+export PATH=$PATH:~/.npm
+
 #JAVA_HOME
 export JAVA_HOME=$(/usr/libexec/java_home)
 
@@ -71,7 +74,7 @@ function disable_sabadell_proxy {
     export SABADELL_PROXY="false"
 }
 function is_sabadell {
-    if [[ `hostname` = *redcam.es* ]]; then
+    if  [[ `hostname` = *redcam.es* || `ipconfig getpacket en4 | grep "adgbs.com"` = *adgbs.com* ]]; then
         read -p "Please, enter your proxy username: `echo $'\n> '`" username
         read -s -p "Please, enter your proxy password: `echo $'\n> '`" pass
         enable_sabadell_proxy $username $pass
@@ -82,3 +85,5 @@ function is_sabadell {
 }
 #invoke is_sabadell
 is_sabadell
+
+

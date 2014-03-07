@@ -269,3 +269,8 @@ delete_maven_unfinished_downloads(){
     find ~/.m2  -name "*.lastUpdated" -exec grep -q "Could not transfer" {} \; -print -exec rm {} \;
 }
 
+clean_caches(){
+    rm -rf ~/Library/Caches/*
+    rm -rf /Library/Caches/*
+}
+
