@@ -213,17 +213,25 @@ function jenkins
 {
 
 case "$1" in
-	"load")
-		#load
-		sudo launchctl $1 /Library/LaunchDaemons/org.jenkins-ci.plist 2>&1
-	;;
-	"unload")
-		#unload
-		sudo launchctl $1 /Library/LaunchDaemons/org.jenkins-ci.plist 2>&1
-	;;
-	*)
-		echo "Usa: {load|unload}" >&2
-	;;
+  "load")
+    #load
+    sudo launchctl $1 /Library/LaunchDaemons/org.jenkins-ci.plist 2>&1
+  ;;
+  "unload")
+    #unload
+    sudo launchctl $1 /Library/LaunchDaemons/org.jenkins-ci.plist 2>&1
+  ;;
+  "port")
+    #cambia el puerto por defecto
+    if [[ "$2" =~ ^[0-9]+$ ]]; then
+      sudo defaults write /Library/Preferences/org.jenkins-ci httpPort $2
+    else
+      echo "Tienes que pasar un número de puerto." >&2
+    fi
+  ;;
+  *)
+    echo "Usa: {load|unload}" >&2
+  ;;
 esac
 }
 
