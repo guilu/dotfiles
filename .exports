@@ -38,7 +38,7 @@ export PATH=$PATH:~/Library/Python/2.7/bin
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 #php
-export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
+export PATH="$(brew --prefix php55)/bin:$PATH"
 #composer require --global
 export PATH="~/.composer/vendor/bin:$PATH"
 
