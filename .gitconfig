@@ -20,6 +20,10 @@
 	pom = push origin master
 	fom = fetch origin master
 	dom = pull origin master
+    pod = push origin develop
+    pod = fetch origin develop
+    fod = fetch origin develop
+    dod = pull origin develop
 
 	#difftol
 	d = difftool
