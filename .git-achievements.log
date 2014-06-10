@@ -494,3 +494,27 @@ Add Signed-off-by line at the end of the commit log message using git commit -s.
        Fetches named heads or tags from another repository with git fetch       
 ********************************************************************************
 
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                             Master Author (Level 8)                             
+                     Made 2^Level commits using git commit.                     
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                                 Gipsy (Level 5)                                 
+            Create, list, delete a tag signed with GPG using git tag            
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                           Master Historian (Level 8)                           
+                    Investigate the commit log using git log.                    
+********************************************************************************
+

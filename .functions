@@ -17,9 +17,9 @@ cdf() {  # short for cdfinder
 
 # lets toss an image onto my server and pbcopy that bitch.
 function scpp() {
-    scp "$1" root@diegobarrioh.dyndns.org:/volume1/web/i/;
-    echo "http://diegobarrioh.dyndns.org/i/$1" | pbcopy;
-    echo "Copied to clipboard: http://diegobarrioh.dyndns.org/i/$1"
+    scp "$1" root@diegobarrioh.synology.me:/volume1/web/i/;
+    echo "http://diegobarrioh.synology.me/i/$1" | pbcopy;
+    echo "Copied to clipboard: http://diegobarrioh.synology.me/i/$1"
 }
 
 # Start an HTTP server from a directory, optionally specifying the port
