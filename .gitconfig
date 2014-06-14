@@ -10,7 +10,7 @@
 	#diff en la consola
 	df = diff --color --color-words --abbrev
 	#pretty logs
-	l = log --graph --pretty=format:'%C(magenta)%h%C(reset) %C(yellow)%d%C(reset) %s - %C(blue)%cr%C(reset) %C(magenta bold)(%an)%C(reset)'
+	l = log --graph --pretty=format:'%C(magenta)%h%C(reset) %C(yellow)%d%C(reset) %s - %C(blue)%cr%C(reset) %C(black bold)(%an)%C(reset)'
 	lg = log --graph --pretty=format:' %C(black)%h%C(reset) -%C(yellow)%d%C(white) %s %C(black)(%cr) %C(black) %an%Creset'
 	l1w = log --since=1.weeks --oneline --graph
 	l2w = log --since=2.weeks --oneline --graph
