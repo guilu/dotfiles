@@ -283,3 +283,12 @@ clean_caches(){
     rm -rf /Library/Caches/*
 }
 
+sf2_project(){
+  if [[ -n "$2" ]]; then
+    composer create-project symfony/framework-standard-edition $1 $2
+    echo "dos parametros"
+  else
+     echo $'Usa: sf2_project <nombre_proyecto> <symfony_version>\n\tpor ejemplo: sf2_project miweb 2.5.*' >&2
+  fi
+
+}
