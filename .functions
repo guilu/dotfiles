@@ -292,3 +292,41 @@ sf2_project(){
   fi
 
 }
+
+
+#FUNCION DE BACKUP DE UN DIERCTORIO (full & incremental)
+function incbackup() {
+  if [ -f $1 ]; then
+    #extraer en un directorio y volver a comprimir
+    echo "Updating Backup File: $1"
+    tar uf $1 $2
+  else
+    echo "No hay fichero previo para incrementar"
+  fi
+}
+
+function fullbackup() {
+  tar cpf $1 $2
+}
+
+function backup(){
+  #source dir without ending / 
+  SOURCEDIR=${1%/}
+  OUTPUTFILE=${1%/}-$(date +%Y%m%d%H%M).tar
+  USERFILE="${1%/}-*.tar"
+
+  if [[ $2 = f ]] || [[ $2 = i ]]; then
+    if [ $2 = f ]; then
+      echo "Running Full Backup..."
+      fullbackup "./"$OUTPUTFILE $SOURCEDIR
+    fi
+    if [ $2 = i ]; then
+      echo "Running Incremental Backup..."
+        incbackup $USERFILE $SOURCEDIR
+      fi
+  else
+
+    echo "usage backup [username] [f for full or i for incremental]"
+  fi
+}
+
