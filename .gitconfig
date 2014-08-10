@@ -10,8 +10,9 @@
 	#diff en la consola
 	df = diff --color --color-words --abbrev
 	#pretty logs
-	l = log --graph --pretty=format:'%C(magenta)%h%C(reset) %C(yellow)%d%C(reset) %s - %C(blue)%cr%C(reset) %C(black bold)(%an)%C(reset)'
+	l = log --graph --pretty=format:'%C(magenta)%h%C(reset)%C(yellow)%d%C(reset) %s - %C(blue bold)%cr%C(reset) %C(black)(%an)%C(reset)'
 	lg = log --graph --pretty=format:' %C(black)%h%C(reset) -%C(yellow)%d%C(white) %s %C(black)(%cr) %C(black) %an%Creset'
+	ll = log --graph --pretty=format:'%C(black)[%C(green)%h%C(black)]%C(reset) %C(black)-%C(yellow)%d %C(white)%s %C(black)- %C(green)%cr %C(black bold)* %an *%C(reset)' --abbrev-commit --date=relative
 	l1w = log --since=1.weeks --oneline --graph
 	l2w = log --since=2.weeks --oneline --graph
 	l1m = log --since=1.month --pretty=format:'%C(magenta)%h%C(reset) %C(yellow)%d%C(reset) %s - %C(blue)%cr%C(reset) - %C(black)%an%C(reset)'
@@ -40,8 +41,8 @@
     bl = blame -wMC
 
     # Undo
-    undo = reset --soft HEAD^
-    revert = revert HEAD
+    undo = reset  HEAD~1
+    revert = reset --hard HEAD~1
 
     # Undo a `git push`
 	undopush = push -f origin HEAD^:master
@@ -92,7 +93,7 @@
 	meta = yellow bold
 	frag = magenta bold
 	old = red bold
-	new = green
+	new = green bold
 
 [color "status"]
 	added = green
