@@ -542,3 +542,19 @@ Add Signed-off-by line at the end of the commit log message using git commit -s.
        Fetches named heads or tags from another repository with git fetch       
 ********************************************************************************
 
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                                     Weaver                                     
+                  Investigate old branches by using git reflog                  
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                                 Stamp Collector                                 
+          Investigate old branches by using git reflog --date=relative          
+********************************************************************************
+
