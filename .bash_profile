@@ -64,3 +64,6 @@ if [ -e ~/code/symfony2-autocomplete/sf2-completion.sh ]; then
     . ~/code/symfony2-autocomplete/sf2-completion.sh
 fi
 
+#autocomplete for 'g' as well (g shoud be in .aliases)
+complete -o default -o nospace -F _git g
+

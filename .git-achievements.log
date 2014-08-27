@@ -534,3 +534,11 @@ Add Signed-off-by line at the end of the commit log message using git commit -s.
               pushed a branch to a remote repository using git push              
 ********************************************************************************
 
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                               Collector (Level 6)                               
+       Fetches named heads or tags from another repository with git fetch       
+********************************************************************************
+
