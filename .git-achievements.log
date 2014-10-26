@@ -558,3 +558,43 @@ Add Signed-off-by line at the end of the commit log message using git commit -s.
           Investigate old branches by using git reflog --date=relative          
 ********************************************************************************
 
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                               Pedantic (Level 6)                               
+ Use the flow extension to encourage an orderly and standardized branching model 
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                         Apprentice Carpenter (Level 1)                         
+ Custom git hooks are installed which help catch issues before they are shared. 
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                             Master Author (Level 9)                             
+                     Made 2^Level commits using git commit.                     
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                          Apprentice Gardner (Level 1)                          
+              Shows the commit ancestry graph with git show-branch              
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                           Master Historian (Level 9)                           
+                    Investigate the commit log using git log.                    
+********************************************************************************
+

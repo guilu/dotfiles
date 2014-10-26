@@ -6,7 +6,12 @@ function md() {
 
 # find shorthand
 function f() {
-    find . -name "$1"
+    find . -iname "*$1*" ${@:2}
+}
+
+# grep shorthand
+function gr() {
+	grep "$1" ${@:2} -R .
 }
 
 # cd into whatever is the forefront Finder window.
