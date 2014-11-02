@@ -1,5 +1,8 @@
 #my own dotfiles
-##as it seems that in order to be a hacker, you should have one of these...
+##it seems that in order to be a hacker, you should have one of these...
+
+#mi propio doftiles
+##parece que si quieres ser un hacker, debes tener uno de estos...
 
 Es un pupurri de varios de ellos que hay por ahí.... los de Paul Irish que a su vez son un fork de los de Mathias Bynens, y otros más por ahí.
 
