@@ -598,3 +598,35 @@ Add Signed-off-by line at the end of the commit log message using git commit -s.
                     Investigate the commit log using git log.                    
 ********************************************************************************
 
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                        Master Carpenter (Level        1)                        
+ Custom git hooks are installed which help catch issues before they are shared. 
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                            Product Manager (Level 6)                            
+       Stash the changes in a dirty working directory away with git stash.       
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                           Master Socialite (Level 8)                           
+              pushed a branch to a remote repository using git push              
+********************************************************************************
+
+
+********************************************************************************
+                            Git Achievement Unlocked!                            
+
+                           Master Collector (Level 7)                           
+       Fetches named heads or tags from another repository with git fetch       
+********************************************************************************
+
